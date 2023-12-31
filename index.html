@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HTML & CSS III</title>
+  <style>
+    /* 👇 scroll down a little bit... */
+    /* 👇 scroll down a little bit... */
+    /* 👇 scroll down a little bit... */
+
+    /* ❗ do NOT change this style */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ❗ do NOT change this style */
+    body,
+    #challenge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ❗ do NOT change this style */
+    [id^=flexContainer] {
+      background-color: orange;
+      border: 5px solid rgb(73, 191, 255);
+      margin: 0 10px 10px 10px;
+      width: 210px;
+      height: 210px;
+    }
+
+    /* ❗ do NOT change this style */
+    .flexItem {
+      background-color: #cee4fe;
+      border: 4px solid black;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+    }
+
+    /* ❗ 👉 WORK BELOW THIS LINE! */
+    /* ❗ 👉 WORK BELOW THIS LINE! */
+    /* ❗ 👉 WORK BELOW THIS LINE! */
+
+    /*
+    👉 Part 1 of 2 👈
+    Work through the tasks until the boxes match the `task-1.png` design inside the `design` folder.
+    Making changes to the HTML is not allowed! The tasks must be completed using CSS alone.
+    */
+
+    /* 👉 Task 1 - [HINT] only the flex container needs to be manipulated */
+
+    /* 👉 Task 2 - [HINT] the flex container needs to change direction */
+
+    /* 👉 Task 3 - [HINT] the flex direction can be reversed */
+
+    /* 👉 Task 4 - [HINT] the flex items need a new order */
+
+    /* 👉 Task 5 - [HINT] research align-self */
+
+    /* 👉 Task 6 - [HINT] flex items can be flex containers */
+
+    /* 👉 Task 7 - [HINT] research flex-grow */
+
+    /* 👉 Task 8 - [HINT] you got this! */
+
+
+    /*
+    👉 Part 2 of 2 👈
+    Revisit the Module Project of HTML & CSS II and re-style it using Flexbox.
+    Prior to starting, remove the "inline-block" declarations, which were a workaround to make divs fall in rows.
+    */
+
+    /* ❗ 👉 WORK ABOVE THIS LINE! */
+    /* ❗ 👉 WORK ABOVE THIS LINE! */
+    /* ❗ 👉 WORK ABOVE THIS LINE! */
+  </style>
+</head>
+
+<body>
+  <h1>HTML & CSS III</h1>
+  <p>Please load this file in VSCode and Chrome, and open the Elements tab in Chrome Dev Tools.</p>
+
+  <h2>👉 Part 1 of 2 👈</h2>
+  <p>Work through the tasks until the boxes match the <a href="./design/part-1.png">DESIGN</a>.</p>
+  <p>Making changes to the HTML is not allowed! The tasks must be completed using CSS alone.</p>
+
+  <div id="challenge">
+    <div id="flexContainer1">
+      <div class="flexItem">1</div>
+      <div class="flexItem">2</div>
+      <div class="flexItem">3</div>
+    </div>
+  </div>
+
+  <h2>👉 Part 2 of 2 👈</h2>
+  <p>Revisit the <a href="./design/part-2.png">Module Project of HTML & CSS II</a> and re-style it using Flexbox. You do
+    not need to submit that repo again.</p>
+  <p>Prior to starting, <b>remove the "inline-block" declarations</b>, which were a workaround to make divs fall in
+    rows.</p>
+
+  <script>
+    [2, 3, 4, 5, 6, 7, 8].forEach(int => {
+      const clone = flexContainer1.cloneNode(true)
+      clone.id = clone.id.slice(0, clone.id.length - 1) + int
+      challenge.append(clone)
+    })
+    const containers = document.querySelectorAll('[id^=flexContainer]')
+    containers.forEach((cont, idx) => {
+      const h2 = document.createElement('h2')
+      h2.textContent = `Task ${idx + 1}`
+      cont.insertAdjacentElement('beforebegin', h2)
+    })
+  </script>
+</body>
+
+</html>
